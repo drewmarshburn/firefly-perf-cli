@@ -24,7 +24,7 @@ kind: Job
 metadata:
   name: {{ include "ffperf.fullname" $root }}-{{ .name }}
   labels:
-    {{- include "ffperf.labels" . | nindent 4 }}
+    {{- include "ffperf.labels" $root | nindent 4 }}
     hyperledger.io/ffperf-instance: {{ .name }}
 spec:
   # we add 60s to the provided instance length to ensure the Job will be around longer enough for the test to complete

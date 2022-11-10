@@ -20,7 +20,7 @@ description: |
   A Helm chart for running instances of ffperf as either a Job or StatefulSet with daemon mode enabled.
 
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "0.0.1"
 
 maintainers:
