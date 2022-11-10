@@ -32,10 +32,6 @@ spec:
   backoffLimit: 0
   completions: 1
   parallelism: 1
-  selector:
-    matchLabels:
-      {{- include "ffperf.selectorLabels" $root | nindent 6 }}
-      hyperledger.io/ffperf-instance: {{ .name }}
   template:
     metadata:
       {{- with $root.Values.podAnnotations }}
