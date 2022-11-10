@@ -78,7 +78,7 @@ spec:
               path: /status
               port: http
           volumeMounts:
-            - mountPath: /etc/ffperf-cli
+            - mountPath: /etc/firefly-perf-cli
               name: config
           resources:
             {{- toYaml $root.Values.resources | nindent 12 }}
