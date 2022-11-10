@@ -52,6 +52,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       serviceAccountName: {{ include "ffperf.serviceAccountName" $root }}
+      restartPolicy: "Never"
       securityContext:
         {{- toYaml $root.Values.podSecurityContext | nindent 8 }}
       containers:
